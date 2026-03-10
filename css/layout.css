@@ -1,0 +1,247 @@
+/* GLOBAL STYLES */
+html {
+    /* El scroll suave se suele aplicar aquí para que afecte a toda la página */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* FIX PARA EL HEADER STICKY: Evita que el menú tape el título al navegar */
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+/* HEADER ESTÁTICO */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    height: auto;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-text {
+    font-weight: var(--fw-bold);
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--accent-color);
+}
+
+/* HERO SECTION (PERFIL) */
+.hero-section {
+    padding: 60px 0;
+    background-color: #fdfdfd;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.hero-content { flex: 1; }
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* AUDIO */
+.audio-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    max-width: 450px;
+}
+
+/* FOTO PERFIL */
+.profile-pic {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* VÍDEO CENTRADO */
+.video-container-centered {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.video-preview {
+    width: 100%;
+    max-width: 850px;
+    height: 480px; 
+    border-radius: 15px;
+    background-color: #000;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.media-label {
+    font-weight: var(--fw-normal);
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* SECCIÓN CONTACTO, CURRÍCULUM Y MAPA */
+.contact-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-title-center {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: var(--fw-bold);
+}
+
+.contact-layout {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.cv-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 5px solid var(--accent-color);
+}
+
+.btn-cv {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: var(--fw-bold);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-cv:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    color: #fff;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* CONTENEDOR MAPA */
+.map-container {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    line-height: 0;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
+    border: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .hero-wrapper { 
+        flex-direction: column-reverse; 
+        text-align: center; 
+    }
+    
+    .video-preview { 
+        height: auto; 
+        aspect-ratio: 16/9; 
+    }
+
+    .contact-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cv-box {
+        border-left: none;
+        border-top: 5px solid var(--accent-color);
+    }
+}

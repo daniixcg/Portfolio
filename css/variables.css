@@ -1,0 +1,14 @@
+:root {
+    --font-main: 'Montserrat', Roboto, sans-serif;;
+
+    --fw-light: 300;
+    --fw-normal: 500;
+    --fw-bold: 700;
+
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.8rem;
+    --fs-body: 1rem;
+    
+    --primary-color: #2D3535;
+    --accent-color: #0985E5;
+}

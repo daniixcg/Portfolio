@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Clavero García</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-text">PORTFOLIO . DANIEL CLAVERO GARCÍA</span>
+            </div>
+
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#perfil" class="nav-item">Perfil</a></li>
+                    <li><a href="#contacto" class="nav-item">Contacto</a></li>
+                    <li><a href="#habilidades" class="nav-item">Habilidades</a></li>
+                    <li><a href="#proyectos" class="nav-item">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="perfil" class="hero-section">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-content">
+                        <h2 class="hero-title">Daniel Clavero García</h2>
+                        <p class="hero-subtitle">Estudiante de 2º de DAW en el INS Daniel Blanxart. Bienvenidos a mi portfolio profesional.</p>
+                        
+                        <div class="audio-box">
+                            <p class="media-label">Presentación en audio:</p>
+                            <audio controls> <!-- Varios formatos por si un navegador no reconoce alguno dar mas opciones -->
+                                <source src="media/audio_presentacion.mp3" type="audio/mpeg">
+                                <source src="media/audio_presentacion.wav" type="audio/wav">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <img src="img/foto_personal.jpg" alt="Daniel Clavero" class="profile-pic">
+                    </div>
+                </div>
+
+                <div class="video-container-centered">
+                    <p class="media-label">Presentación en video:</p>
+                    <video controls poster="img/miniatura_video.webp" class="video-preview">
+                        <source src="media/video_presentacion.mp4" type="video/mp4">
+                        Tu navegador no soporta el video.
+                    </video>
+                </div>
+            </div>
+        </section>
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <h2 class="section-title-center">Contacto y Ubicación</h2>
+                <div class="contact-layout">
+                    
+                    <div class="contact-info">
+                        <h3>¿Hablamos?</h3>
+                        <p>Este es mi centro de estudios actual. Si necesitas más detalles sobre mi formación y experiencia técnica, puedes consultar mi currículum profesional.</p>
+                        
+                        <div class="cv-box">
+                            <p><strong>¿Quieres saber más?</strong> Aquí tienes mi currículum:</p>
+                            <a href="docs/curriculum-daniel-clavero.pdf" target="_blank" class="btn-cv">
+                                Ver Currículum (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.9334164934558!2d1.889490376549056!3d41.54903888595209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a48b9fe0e810af%3A0x1571d25cf3f709ee!2sINS%20Daniel%20Blanxart!5e0!3m2!1ses!2ses!4v1773148237810!5m2!1ses!2ses" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
