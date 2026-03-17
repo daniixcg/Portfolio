@@ -16,3 +16,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. LÓGICA DE AUDIO Y VÍDEO (Pausa automática)
+    const audio = document.querySelector('audio');
+    const video = document.querySelector('video');
+
+    if (audio && video) {
+        audio.addEventListener('play', () => {
+            if (!video.paused) video.pause();
+        });
+
+        video.addEventListener('play', () => {
+            if (!audio.paused) audio.pause();
+        });
+    }
+
+    // 2. LÓGICA DEL FILTRO DE HABILIDADES
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const skills = document.querySelectorAll('.skill-pill');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // A) Quitar la clase 'active' de todos los botones
+            filterBtns.forEach(b => b.classList.remove('active'));
+            
+            // B) Añadir la clase 'active' al botón que hemos clicado
+            btn.classList.add('active');
+
+            // C) Saber qué categoría queremos filtrar
+            const filterValue = btn.getAttribute('data-filter');
+
+            // D) Mostrar u ocultar las píldoras según la categoría
+            skills.forEach(skill => {
+                if (filterValue === 'all' || skill.getAttribute('data-category') === filterValue) {
+                    skill.classList.remove('hide-skill');
+                } else {
+                    skill.classList.add('hide-skill');
+                }
+            });
+        });
+    });
+
+});

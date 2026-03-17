@@ -66,7 +66,7 @@
                         <p>Este es mi centro de estudios actual. Si necesitas más detalles sobre mi formación y experiencia técnica, puedes consultar mi currículum profesional.</p>
                         
                         <div class="cv-box">
-                            <p><strong>¿Quieres saber más?</strong> Aquí tienes mi currículum:</p>
+                            <p>¿Quieres saber más? Aquí tienes mi currículum:</p>
                             <a href="docs/curriculum-daniel-clavero.pdf" target="_blank" class="btn-cv">
                                 Ver Currículum (PDF)
                             </a>
@@ -80,6 +80,90 @@
                             loading="lazy">
                         </iframe>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="habilidades" class="skills-section">
+            <div class="container">
+                <h2 class="section-title-center">Mis Habilidades</h2>
+                <p class="skills-intro">Filtra las tecnologías para ver mi stack detallado:</p>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+                    <button class="filter-btn" data-filter="database">Bases de Datos</button>
+                    <button class="filter-btn" data-filter="devops">DevOps</button> </div>
+
+                <div class="skills-container">
+                    <div class="skill-pill" data-category="frontend">HTML</div>
+                    <div class="skill-pill" data-category="frontend">CSS</div>
+                    <div class="skill-pill" data-category="frontend">JS</div>
+                    
+                    <div class="skill-pill" data-category="backend">Node.js</div>
+                    <div class="skill-pill" data-category="backend">PHP</div>
+                    <div class="skill-pill" data-category="backend">Python</div>
+
+                    <div class="skill-pill" data-category="frameworks">Vue.js</div>
+                    <div class="skill-pill" data-category="frameworks">Django</div>
+                    
+                    <div class="skill-pill" data-category="database">PostgreSQL</div>
+                    <div class="skill-pill" data-category="database">MySQL</div>
+                    <div class="skill-pill" data-category="database">MongoDB</div>
+
+                    <div class="skill-pill" data-category="devops">Git</div>
+                    <div class="skill-pill" data-category="devops">GitHub</div>
+                    <div class="skill-pill" data-category="devops">Docker</div>
+                    <div class="skill-pill" data-category="devops">Kubernetes</div>
+                </div>
+            </div>
+        </section>
+        <section id="proyectos" class="projects-section">
+            <div class="container">
+                <h2 class="section-title-center">Mis Proyectos</h2>
+                <div class="projects-grid">
+                    
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/sonar.webp" alt="Preview de Sonar">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Música Underground</span>
+                            <h3>Sonar</h3>
+                            <p>Herramienta para descubrir música underground mediante un sistema avanzado de recomendaciones. En este proyecto me encargué de toda la lógica del servidor y arquitectura de datos.</p>
+                            <div class="project-tags">
+                                <span>Node.js</span>
+                                <span>PostgreSQL</span>
+                                <span>Express</span>
+                                <span>Tailwind</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ericbarrachina/Sonar_Project" target="_blank" class="btn-project secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/safeholder-preview.jpg" alt="Preview de Safeholder">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Finanzas & Crypto</span>
+                            <h3>Safeholder</h3>
+                            <p>Gestor integral de cartera de criptomonedas diseñado para inversores. Permite el seguimiento de activos en tiempo real y gestión de historial de transacciones.</p>
+                            <div class="project-tags">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/daniixcg/SafeHolder" target="_blank" class="btn-project">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
