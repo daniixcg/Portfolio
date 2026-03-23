@@ -1,21 +1,45 @@
+<!-- ============================================
+     PORTFOLIO DE DANIEL CLAVERO GARCÍA
+     Página principal del portfolio profesional
+     Estructura: HTML semántico con navegación responsive
+     ============================================ -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags: configuración del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
     <title>Daniel Clavero García</title>
+    
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Script JavaScript (defer: carga después del HTML) -->
     <script defer src="js/main.js"></script>
 </head>
 <body>
+    <!-- ============================================
+         HEADER: Navegación principal
+         Contiene: logo y menú de navegación
+         Responsive: menú hamburguesa en móvil
+         ============================================ -->
     <header class="main-header">
         <div class="header-container">
             <div class="logo">
                 <span class="logo-text">PORTFOLIO . DANIEL CLAVERO GARCÍA</span>
             </div>
-
+            
+            <!-- Botón de menú hamburguesa (para móvil) -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span> <!-- Línea 1 del hamburguesa -->
+                <span class="bar"></span> <!-- Línea 2 del hamburguesa -->
+                <span class="bar"></span> <!-- Línea 3 del hamburguesa -->
+            </div>
+            
+            <!-- Menú de navegación -->
             <nav class="navbar">
                 <ul class="nav-links">
+                    <!-- Enlaces internos que apuntan a secciones de la página -->
                     <li><a href="#perfil" class="nav-item">Perfil</a></li>
                     <li><a href="#contacto" class="nav-item">Contacto</a></li>
                     <li><a href="#habilidades" class="nav-item">Habilidades</a></li>
@@ -25,28 +49,39 @@
         </div>
     </header>
     <main>
+        <!-- ============================================
+             SECCIÓN HERO / PERFIL (#perfil)
+             Introducción principal de la página
+             Contiene: nombre, descripción, foto, audio y video de presentación
+             ============================================ -->
         <section id="perfil" class="hero-section">
             <div class="container">
+                <!-- Contenedor flexible: texto a la izquierda, imagen a la derecha -->
                 <div class="hero-wrapper">
+                    <!-- Contenido de texto: título, subtítulo y audio -->
                     <div class="hero-content">
                         <h2 class="hero-title">Daniel Clavero García</h2>
                         <p class="hero-subtitle">Estudiante de 2º de DAW en el INS Daniel Blanxart. Bienvenidos a mi portfolio profesional.</p>
                         
+                        <!-- Caja de audio: presentación en formato de audio -->
                         <div class="audio-box">
                             <p class="media-label">Presentación en audio:</p>
-                            <audio controls> <!-- Varios formatos por si un navegador no reconoce alguno dar mas opciones -->
+                            <audio controls>
+                                <!-- Fuentes múltiples: navegador elige formato soportado -->
                                 <source src="media/audio_presentacion.mp3" type="audio/mpeg">
                                 <source src="media/audio_presentacion.wav" type="audio/wav">
                                 Tu navegador no soporta el elemento de audio.
                             </audio>
                         </div>
                     </div>
-
+                    
+                    <!-- Foto de perfil -->
                     <div class="hero-image">
                         <img src="img/foto_personal.jpg" alt="Daniel Clavero" class="profile-pic">
                     </div>
                 </div>
-
+                
+                <!-- Video de presentación (centrado) -->
                 <div class="video-container-centered">
                     <p class="media-label">Presentación en video:</p>
                     <video controls poster="img/miniatura_video.webp" class="video-preview">
@@ -56,23 +91,33 @@
                 </div>
             </div>
         </section>
+        <!-- ============================================
+             SECCIÓN CONTACTO (#contacto)
+             Información de contacto y ubicación
+             Contiene: descripción, enlace a CV y mapa Google Maps embebido
+             ============================================ -->
         <section id="contacto" class="contact-section">
             <div class="container">
                 <h2 class="section-title-center">Contacto y Ubicación</h2>
+                
+                <!-- Contenedor con dos columnas: info + mapa -->
                 <div class="contact-layout">
-                    
+                    <!-- Información de contacto y descarga de CV -->
                     <div class="contact-info">
                         <h3>¿Hablamos?</h3>
                         <p>Este es mi centro de estudios actual. Si necesitas más detalles sobre mi formación y experiencia técnica, puedes consultar mi currículum profesional.</p>
                         
+                        <!-- Caja de descarga de currículum -->
                         <div class="cv-box">
                             <p>¿Quieres saber más? Aquí tienes mi currículum:</p>
+                            <!-- Enlace a PDF del CV que se abre en pestaña nueva -->
                             <a href="docs/curriculum-daniel-clavero.pdf" target="_blank" class="btn-cv">
                                 Ver Currículum (PDF)
                             </a>
                         </div>
                     </div>
 
+                    <!-- Mapa embebido de Google Maps con ubicación del instituto -->
                     <div class="map-container">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.9334164934558!2d1.889490376549056!3d41.54903888595209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a48b9fe0e810af%3A0x1571d25cf3f709ee!2sINS%20Daniel%20Blanxart!5e0!3m2!1ses!2ses!4v1773148237810!5m2!1ses!2ses" 
@@ -83,81 +128,112 @@
                 </div>
             </div>
         </section>
+        <!-- ============================================
+             SECCIÓN HABILIDADES (#habilidades)
+             Muestra las tecnologías y herramientas técnicas
+             Función: botones filtro para segmentar por categoría
+             Categorías: Frontend, Backend, Frameworks, BD, DevOps
+             ============================================ -->
         <section id="habilidades" class="skills-section">
             <div class="container">
                 <h2 class="section-title-center">Mis Habilidades</h2>
                 <p class="skills-intro">Filtra las tecnologías para ver mi stack detallado:</p>
                 
+                <!-- Botones de filtro para categorizar habilidades -->
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Todas</button>
                     <button class="filter-btn" data-filter="frontend">Frontend</button>
                     <button class="filter-btn" data-filter="backend">Backend</button>
                     <button class="filter-btn" data-filter="frameworks">Frameworks</button>
                     <button class="filter-btn" data-filter="database">Bases de Datos</button>
-                    <button class="filter-btn" data-filter="devops">DevOps</button> </div>
-
+                    <button class="filter-btn" data-filter="devops">DevOps</button> 
+                </div>
+                
+                <!-- Contenedor con "pills" (etiquetas) de cada tecnología -->
+                <!-- Cada pill tiene un atributo data-category para filtrado por JavaScript -->
                 <div class="skills-container">
+                    <!-- FRONTEND: Lenguajes de cliente -->
                     <div class="skill-pill" data-category="frontend">HTML</div>
                     <div class="skill-pill" data-category="frontend">CSS</div>
                     <div class="skill-pill" data-category="frontend">JS</div>
                     
+                    <!-- BACKEND: Lenguajes de servidor -->
                     <div class="skill-pill" data-category="backend">Node.js</div>
                     <div class="skill-pill" data-category="backend">PHP</div>
                     <div class="skill-pill" data-category="backend">Python</div>
 
+                    <!-- FRAMEWORKS: Librerías y frameworks -->
                     <div class="skill-pill" data-category="frameworks">Vue.js</div>
                     <div class="skill-pill" data-category="frameworks">Django</div>
                     
+                    <!-- BASES DE DATOS: Sistemas de almacenamiento -->
                     <div class="skill-pill" data-category="database">PostgreSQL</div>
                     <div class="skill-pill" data-category="database">MySQL</div>
                     <div class="skill-pill" data-category="database">MongoDB</div>
 
+                    <!-- DEVOPS: Herramientas de desarrollo y deployment -->
                     <div class="skill-pill" data-category="devops">Git</div>
                     <div class="skill-pill" data-category="devops">GitHub</div>
                     <div class="skill-pill" data-category="devops">Docker</div>
                     <div class="skill-pill" data-category="devops">Kubernetes</div>
+                    <div class="skill-pill" data-category="devops">VirtualBox</div>
                 </div>
             </div>
         </section>
+        <!-- ============================================
+             SECCIÓN PROYECTOS (#proyectos)
+             Portafolio de proyectos destacados
+             Estructura: Grid de tarjetas con proyectos
+             Cada tarjeta incluye: imagen, descripción, techs y link a GitHub
+             ============================================ -->
         <section id="proyectos" class="projects-section">
             <div class="container">
                 <h2 class="section-title-center">Mis Proyectos</h2>
+                
+                <!-- Grid responsivo de proyectos -->
                 <div class="projects-grid">
-                    
+                    <!-- Proyecto 1: Sonar -->
                     <article class="project-card">
-                        <div class="project-image">
-                            <img src="img/sonar.webp" alt="Preview de Sonar">
-                        </div>
+                        <!-- Información del proyecto -->
                         <div class="project-info">
-                            <span class="project-category">Música Underground</span>
+                            <!-- Título -->
                             <h3>Sonar</h3>
+                            <!-- Categoría del proyecto -->
+                            <span class="project-category">Música Underground</span>
+                            <!-- Descripción -->
                             <p>Herramienta para descubrir música underground mediante un sistema avanzado de recomendaciones. En este proyecto me encargué de toda la lógica del servidor y arquitectura de datos.</p>
+                            <!-- Tecnologías utilizadas -->
                             <div class="project-tags">
                                 <span>Node.js</span>
                                 <span>PostgreSQL</span>
                                 <span>Express</span>
-                                <span>Tailwind</span>
+                                <span>Vite</span>
                             </div>
+                            <!-- Enlace a repositorio GitHub -->
                             <div class="project-links">
-                                <a href="https://github.com/ericbarrachina/Sonar_Project" target="_blank" class="btn-project secondary">GitHub</a>
+                                <a href="https://github.com/ericbarrachina/Sonar" target="_blank" class="btn-project">GitHub</a>
                             </div>
                         </div>
                     </article>
-
+                    
+                    <!-- Proyecto 2: Safeholder -->
                     <article class="project-card">
-                        <div class="project-image">
-                            <img src="img/safeholder-preview.jpg" alt="Preview de Safeholder">
-                        </div>
+                        <!-- Información del proyecto -->
                         <div class="project-info">
-                            <span class="project-category">Finanzas & Crypto</span>
+                            <!-- Título -->
                             <h3>Safeholder</h3>
+                            <!-- Categoría del proyecto -->
+                            <span class="project-category">Finanzas & Crypto</span>
+                            <!-- Descripción -->
                             <p>Gestor integral de cartera de criptomonedas diseñado para inversores. Permite el seguimiento de activos en tiempo real y gestión de historial de transacciones.</p>
+                            <!-- Tecnologías utilizadas -->
                             <div class="project-tags">
                                 <span>PHP</span>
                                 <span>MySQL</span>
                                 <span>JavaScript</span>
                                 <span>CSS3</span>
                             </div>
+                            <!-- Enlace a repositorio GitHub -->
                             <div class="project-links">
                                 <a href="https://github.com/daniixcg/SafeHolder" target="_blank" class="btn-project">GitHub</a>
                             </div>
@@ -168,5 +244,32 @@
             </div>
         </section>
     </main>
+    <!-- ============================================
+         FOOTER: Pie de página
+         Contiene: copyright, descripción y enlaces a redes
+         ============================================ -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Información legal y copyright -->
+                <div class="footer-info">
+                    <p class="footer-copy">© 2026 Daniel Clavero García. Todos los derechos reservados.</p>
+                    <p class="footer-tagline">Desarrollado con pasión y código limpio.</p>
+                </div>
+                
+                <!-- Enlaces a redes sociales -->
+                <div class="footer-socials">
+                    <!-- Enlace GitHub -->
+                    <a href="https://github.com/daniixcg" target="_blank" class="footer-link">
+                        <span>GitHub</span>
+                    </a>
+                    <!-- Enlace LinkedIn -->
+                    <a href="https://linkedin.com/in/daniel-clavero-garcía-a0a218307" target="_blank" class="footer-link">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

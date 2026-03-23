@@ -60,3 +60,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // =========================================
+    // LÓGICA DEL MENÚ MÓVIL (HAMBURGUESA)
+    // =========================================
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-item");
+
+    // Abrir/cerrar menú al pulsar la hamburguesa
+    if (mobileMenu) {
+        mobileMenu.addEventListener("click", () => {
+            mobileMenu.classList.toggle("is-active");
+            navLinks.classList.toggle("active");
+        });
+    }
+
+    // Cerrar el menú automáticamente al hacer clic en cualquier enlace
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            mobileMenu.classList.remove("is-active");
+            navLinks.classList.remove("active");
+        });
+    });
+
+});
